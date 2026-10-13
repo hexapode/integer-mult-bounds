@@ -1,0 +1,271 @@
+{
+  "status": "PASS_FRESH_LATEST_T37_OPTIONAL619_COMPLETE_ADMISSION",
+  "python": "3.13.10",
+  "command_template": "CPLUS_INCLUDE_PATH=<Boost headers> python3.13 -B research/game-latest-quests/verify.py --work <fresh external directory>",
+  "exit_code": 0,
+  "kappa": "1675657692049141/1000000000000000000",
+  "decimal": "0.001675657692049141",
+  "baseline_head": "13d02293a7af67d7e3bd2e4d7f1a2943ac20537e",
+  "baseline_kappa": "1675568675201533/1000000000000000000",
+  "delta": "11127105951/125000000000000000",
+  "controls": {
+    "admission": 114,
+    "bit": 12,
+    "controller": 23,
+    "geometry": 7,
+    "dispatch": 1
+  },
+  "receipt_sha256": "b548520c821d6aac9c19f3688a2d7a33b4653c10c626ad5176043d6c17133cbc",
+  "tested_manifest_sha256": "6ffe7834d53ccdbc62b94281437b3a012bc585a275c7a3fa89b454a4a9574f6b",
+  "assembly_sha256": "9a56699839f982a74e6b2b0bcb3e29d8ab73e08b806eced5aaa19a2f87995a99",
+  "independent_sha256": "73b11ac077f3d9e56fa680926075c4163f7cfcdbd9c3c024b7419fc9b51203fe",
+  "stages": [
+    {
+      "name": "construct",
+      "script_sha256": "304070ee3f2a98d233d089769a748cdb0ce0751f8e6bfe32fbea07f5e0f0de5d",
+      "exit_code": 0,
+      "seconds": 2.963111750083044,
+      "log_sha256": "5deca9b1198a99d9ada3a9ec3975480daf592adca4641f17721befbb05b179c1",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<PACKAGE>/construct.py",
+        "--baseline",
+        "<PACKAGE>/vendor/pr1169",
+        "--out",
+        "<WORK>/construction"
+      ]
+    },
+    {
+      "name": "baseline",
+      "script_sha256": "c317259af90ef4881bad5ce18844f4cd55b55e925bba35d433c20c901ed00da1",
+      "exit_code": 0,
+      "seconds": 166.572834166931,
+      "log_sha256": "05bfb0dbd3bf49aa6fe403180d60eb289c34e485a6ef2343bf87d4180ebc5cc6",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<PACKAGE>/vendor/pr1169/verify.py",
+        "--work",
+        "<WORK>/baseline"
+      ]
+    },
+    {
+      "name": "native-2",
+      "script_sha256": "1fb596fbafdb19140f483cd34db2994c571e3b962e33b8ea9b3ddc486e37def6",
+      "exit_code": 0,
+      "seconds": 104.32459800015204,
+      "log_sha256": "5ca9f310247cb601c905ff30597baa4634847395d7826e9ab926a9876ced2514",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/k8-eight-ends/replay_native.py",
+        "<WORK>/construction/FULL-WORD-2.json.gz",
+        "<WORK>/native/2"
+      ]
+    },
+    {
+      "name": "independent-local-2",
+      "script_sha256": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+      "exit_code": 0,
+      "seconds": 0.6579619999974966,
+      "log_sha256": "b3ae3d3fcb33c574aad136d08a871c575cb302a94402a337ff83f6827cc85c18",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/gauge44-slots/independent/audit_local.py",
+        "--word",
+        "<WORK>/construction/FULL-WORD-2.json.gz",
+        "--main",
+        "<WORK>/baseline/layout/joint1148-round45/source",
+        "--output",
+        "<WORK>/AUDIT-LOCAL-2.json"
+      ]
+    },
+    {
+      "name": "local-controls",
+      "script_sha256": "354dfba83c5f0129ae45f019f6f33e9c5fa7adecbce11dbd6d8ef1911d21e59c",
+      "exit_code": 0,
+      "seconds": 1.4001702920068055,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<PACKAGE>/controls.py",
+        "--construction",
+        "<WORK>/construction",
+        "--out",
+        "<WORK>/local-controls",
+        "--source",
+        "<WORK>/baseline/layout/joint1148-round45/source"
+      ]
+    },
+    {
+      "name": "bind",
+      "script_sha256": "1d39bcc7b63ac158e021454beaae897d123e174360573762aecade3cd43193f6",
+      "exit_code": 0,
+      "seconds": 0.36990266712382436,
+      "log_sha256": "71f679ce5a123fb58397fd6852ba64ce3832fd20e81a096bfda9a1cf3237237a",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/bind_providers_portable.py",
+        "--baseline",
+        "<WORK>/baseline/strict/parent",
+        "--provider",
+        "gauge44=<WORK>/native/0/local",
+        "--provider",
+        "quest2=<WORK>/native/2/local",
+        "--plan",
+        "<PACKAGE>/data/PLAN.json",
+        "--out",
+        "<WORK>/global"
+      ]
+    },
+    {
+      "name": "emit",
+      "script_sha256": "3219e0706d497a2e6b595cec0a0d5bdbfbd1d991bf70136762eada44126a9ac1",
+      "exit_code": 0,
+      "seconds": 8.455912707839161,
+      "log_sha256": "382932d9d125914216f9adc7d477db847573aca52c2fe53834e9991bff74b103",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/emit_allcold.py",
+        "--base",
+        "<WORK>/global/base",
+        "--owners",
+        "<WORK>/construction/OWNERS.json.gz",
+        "--plan",
+        "<WORK>/global/PLAN.json",
+        "--out",
+        "<WORK>/global/hosted"
+      ]
+    },
+    {
+      "name": "audit",
+      "script_sha256": "a8d3c48e26957c5174ea35043545d3863a4c19c82422074ac42132b446533b4a",
+      "exit_code": 0,
+      "seconds": 47.955250415951014,
+      "log_sha256": "7886b42c16e0ae5e348d8df425b35eb268633c1ae87f86c389ee90ed5930607f",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/audit_allcold.py",
+        "<WORK>/global/base",
+        "<WORK>/global/hosted",
+        "<WORK>/global/audit/ASYNC-AUDIT.json",
+        "--mutation-controls"
+      ]
+    },
+    {
+      "name": "invoice",
+      "script_sha256": "e97c74d1ccfb0b0e26260e65bb780fa0103f4c716647e238f943a2e840a1f566",
+      "exit_code": 0,
+      "seconds": 1.290443167090416,
+      "log_sha256": "5025034cd0014cd1e579ed18f50b1e6a75504401f3ccf3d8daf7be088e9a8fc0",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/invoice_allcold.py",
+        "--base",
+        "<WORK>/global/base",
+        "--hosted",
+        "<WORK>/global/hosted",
+        "--audit",
+        "<WORK>/global/audit",
+        "--out",
+        "<WORK>/global/audit",
+        "--retained-invoice",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/vendor/pr558/vendor/pr552/complex-global/vendor531/evidence/audit/PREFIX-AND-INVOICE.json"
+      ]
+    },
+    {
+      "name": "assembly",
+      "script_sha256": "23e6b2301cd3d2f3556e5f0290eeeb2e52a5a8128f4e892b3bd4e98dca910d3a",
+      "exit_code": 0,
+      "seconds": 0.2611770418006927,
+      "log_sha256": "4a4c40f3ceb9bb174bc220eff396fe53715880c1ecda5065439036d48566d6ae",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/assemble.py",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold",
+        "<WORK>/global",
+        "<WORK>/ASSEMBLY.json"
+      ]
+    },
+    {
+      "name": "ADMISSION-CONTROLS",
+      "script_sha256": "29ba6742d899d2318a96745c8ec21de06ba3968d4641c3400a15bc714e0d7f9e",
+      "exit_code": 0,
+      "seconds": 0.511731666047126,
+      "log_sha256": "40f0c35552fb10f02288ae8d2c6b9f902050fb370c0a19b7b88c977d0d44dab1",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/assembly_controls.py",
+        "--source-package",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold",
+        "--owner",
+        "<WORK>/global/audit/OWNERS-AND-PROFILE.json",
+        "--invoice",
+        "<WORK>/global/audit/PREFIX-AND-INVOICE.json",
+        "--out",
+        "<WORK>/ADMISSION-CONTROLS.json"
+      ]
+    },
+    {
+      "name": "BIT-CONTROLS",
+      "script_sha256": "e6d33fb61a570c3f50669412acc467a3fd06ef0b806da6a75bc296c6ba2142a5",
+      "exit_code": 0,
+      "seconds": 0.48342574993148446,
+      "log_sha256": "d54d260bf95bd8ae4ab8846314082b93b2e3d8f427eb35376691f2ce543a6b67",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold/code/run_portable.py",
+        "<WORK>/baseline/layout/owner37-round44/source/research/r480-owner-optimum/code/bit_supplier_controls.py",
+        "--source-package",
+        "<WORK>/baseline/layout/joint1148-round45/source/research/complex-k492-owner-repair/vendor/multicold",
+        "--owner",
+        "<WORK>/global/audit/OWNERS-AND-PROFILE.json",
+        "--invoice",
+        "<WORK>/global/audit/PREFIX-AND-INVOICE.json",
+        "--out",
+        "<WORK>/BIT-CONTROLS.json"
+      ]
+    },
+    {
+      "name": "independent",
+      "script_sha256": "659c7b31bc36feba43b85027bfb5e112a08a03b266a3ffa020315c1aa5765bce",
+      "exit_code": 0,
+      "seconds": 1.1366822910495102,
+      "log_sha256": "887560f413e7ec7778f45fdfdce1cb5e4e3f6501128fb2958fd634eb580a3bd0",
+      "command_template": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "<PACKAGE>/independent.py",
+        "--candidate",
+        "<WORK>/construction",
+        "--native",
+        "<WORK>/native",
+        "--parent",
+        "<WORK>/baseline/layout/demotions1148-round43/baseline-replay/parent/t16/global8/base/split-centres/GLOBAL-TEMPLATE.json.gz",
+        "--baseline",
+        "<PACKAGE>/vendor/pr1169",
+        "--out",
+        "<WORK>/INDEPENDENT.json"
+      ]
+    }
+  ],
+  "optimized_python_control_exit": 1,
+  "optimized_python_control_log_sha256": "95df297953edad14755ad801f2d3f6d282596f0b2470ebdd69feb11313651915",
+  "scope": "Fresh finite baseline local word and T37 admission (inherited parent geometry is explicitly reused), changed native scalar/frame/phase and mixed owner/controller/invoice/outer admission. All inherited all-size/compiler, realization, hosting, precision/tape, exact-recovery, analytic and bit H1-H5 assumptions remain conditional. No runtime claim."
+}

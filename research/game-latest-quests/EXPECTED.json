@@ -1,0 +1,27 @@
+{
+  "kappa": "1675657692049141/1000000000000000000",
+  "baseline_kappa": "1675568675201533/1000000000000000000",
+  "groups": 178,
+  "provider_counts": {
+    "gauge44": 155,
+    "quest2": 178
+  },
+  "controls": {
+    "admission": 114,
+    "bit": 12,
+    "controller": 23,
+    "geometry": 7,
+    "dispatch": 1
+  },
+  "prefix_bits": 775,
+  "physical_row_coefficient": 17495,
+  "generated_sha256": {
+    "FULL-WORD-0.json.gz": "a0622d86259c4163e58cf0677ce575b6039a8ae4c95aa6d8b82a8163cbd42718",
+    "RESULT.json": "dbe35058a33a3804f365f3a1f31e5f4b3705525059aa48e679f84d5bb75505ed",
+    "OWNERS.json.gz": "0d81b2bdb6d15110dff0df8ee43301018121bc3a6477df6a95baa106479c0763",
+    "FULL-WORD-2.json.gz": "9cec0b4cb7e0fa5573ce07795484a5708ff57f891ce581c1c782525bb40f3aae",
+    "DISPATCH.json": "288cc5ed787348f20e088228df12769f7ba68de7e37e225564590e28c146fc1e",
+    "CONSTRUCTED.json": "dbe35058a33a3804f365f3a1f31e5f4b3705525059aa48e679f84d5bb75505ed",
+    "PROFILE.json": "8e6537d14d528862f323ebdc036e61a3dae881e4dd610eaeee7c0a355afed46f"
+  }
+}

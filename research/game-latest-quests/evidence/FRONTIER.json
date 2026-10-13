@@ -1,0 +1,43 @@
+{
+  "status": "SUPERSEDED_BY_INDEPENDENTLY_REPRODUCED_CONSTRUCTION",
+  "pr": "https://github.com/CrocSwap/integer-mult-bounds/pull/1193",
+  "head": "8b005a92f16730bd054416d07d3788efbf53d515",
+  "kappa": "1675672695827067/1000000000000000000",
+  "decimal": "0.001675672695827067",
+  "receipt_sha256": "848041c05abb77bf23db6e14f07b47042135d34b38accfe1bf5b83716b4008aa",
+  "fresh_native_providers": 2,
+  "ancestry": "Supported source-bound PR799 ancestry reuse; independent coverage and binding checks passed.",
+  "our_kappa": "1675657692049141/1000000000000000000",
+  "our_gap": "7501888963/500000000000000000",
+  "status_scope": "Finite conditional construction, not maintainer acceptance or unconditional theorem.",
+  "later_claims": [
+    {
+      "pr": 1193,
+      "head": "d313cce94d7bb4dd8b15265cad0aa5fb77b2ecff",
+      "title": "Conditional \u03ba = 0.001675769763609769: mixed T37 allocation with source-holder fusions",
+      "status": "nativeandstrictglobal claimedPASS; cleanstandalonepending; notreproducednewpackage",
+      "checks": {
+        "queued": 61
+      }
+    },
+    {
+      "pr": 1201,
+      "head": "86a7072626d9b3e49222378bb76601a11d2f58ea",
+      "title": "Conditional kappa 0.00167576776285696: mixed T37 source-holder fusions",
+      "status": "complete standaloneclaimedPASS; newheadnotindependentlyreproduced",
+      "checks": {
+        "queued": 60
+      }
+    },
+    {
+      "pr": 1207,
+      "head": "62e5ce089792accf5617b8d3843d347ad8502d1a",
+      "title": "Conditional kappa 0.001675807682652: X54 on mixed T37 fusion providers",
+      "status": "arithmeticnomination; explicitlyno native/globaladmission",
+      "checks": {
+        "queued": 60
+      }
+    }
+  ],
+  "comparison_note": "Higher later fused proposals were identified but not independently replayed in this bounded batch; this package makes no live-record claim."
+}

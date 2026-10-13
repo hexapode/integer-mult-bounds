@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN_FINAL_178_QUEST_SEARCH",
+  "runs": [
+    {
+      "seed": 1169401,
+      "seconds": 111.63307016715407,
+      "cpu_seconds": null,
+      "initial_four_group_quota": 25,
+      "final_four_group_quota": 176,
+      "stats": {
+        "pairs_tested": 16582809,
+        "path_trials": 565025,
+        "path_undo": 550167,
+        "path_success_2": 9048,
+        "path_success_3": 3968,
+        "path_success_4": 1842
+      },
+      "directory": "seed1169401",
+      "heuristic_exit_code": 0
+    },
+    {
+      "seed": 1169402,
+      "seconds": 251.7418351250235,
+      "cpu_seconds": null,
+      "initial_four_group_quota": 176,
+      "final_four_group_quota": 178,
+      "stats": {
+        "pairs_tested": 2357291,
+        "path_trials": 789027,
+        "path_undo": 789017,
+        "path_success_2": 8,
+        "path_success_3": 2
+      },
+      "directory": "seed1169402",
+      "heuristic_exit_code": 0
+    },
+    {
+      "seed": 1169403,
+      "seconds": 1.648701790953055,
+      "cpu_seconds": 2.3207150000000003,
+      "initial_four_group_quota": 178,
+      "final_four_group_quota": 178,
+      "stats": {},
+      "directory": "seed1169403",
+      "heuristic_exit_code": 0
+    },
+    {
+      "seed": 1169403,
+      "seconds": 2.9954480840824544,
+      "cpu_seconds": 3.662839,
+      "initial_four_group_quota": 178,
+      "final_four_group_quota": 178,
+      "stats": {
+        "edge_queries": 94694,
+        "no_augmenting_path": 1
+      },
+      "directory": "seed1169403-fixed",
+      "heuristic_exit_code": 0
+    }
+  ],
+  "wall_search_and_recount_seconds": 368.0190551672131,
+  "known_bfs_process_cpu_seconds": 5.983554,
+  "cpu_accounting": "First two runs did not record process CPU, so no exact total CPU is claimed. They were single-process pure-Python heuristics capped by monotonic wall timers110 and250 seconds. BFS recorded process CPU. Loading/writing and validation also consume CPU outside the core timed search.",
+  "stop_reason": "Final bounded BFS found no donor-to-recipient augmenting path in the tested current legal transfer graph to depth8. This does not rule out neutral setup changes, deeper paths, other widths, new providers, or different chronology.",
+  "failed_screen": "Initial BFS mistakenly omitted zero-gap recipients; it performed zero edge queries. Preserved seed1169403 result is not evidence of infeasibility; corrected seed1169403-fixed includes these recipients.",
+  "total_random_path_trials": 1354052,
+  "final_edge_queries": 94694,
+  "final_candidate": "evidence/game-latest-inventory/candidate-final-v2",
+  "remaining_unit_gaps": 122
+}
